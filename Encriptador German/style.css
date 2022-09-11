@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: #000000;
+  font-family: 'Tangerine', sans-serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1300px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  grid-template-areas:  "encabezado encabezado encabezado"
+                        "contenido contenido sidebar"
+                        "widget-1 widget-1 sidebar";
+}
+
+main, aside {
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: #8a8585 0px 13px 9px;
+}
+
+header {
+  background: #0099FF;
+  color: #0A3871;
+  padding: 0;
+  border-radius: 3px;
+  grid-area: encabezado;
+  
+}
+
+header .logoNombre {
+  width: 70px;
+  height: 70px;
+  color: #ebeced;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+header .logoNombre h2 {
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+}
+
+
+main {
+  background: #ffffff;
+  grid-area: contenido;
+  border-radius: 3px;
+}
+
+main div p {
+  text-align: center;
+  font-size: 30px;
+}
+
+main .entradaTexto {
+  resize: none;
+  border: none; 
+  width: 100%;
+  font-family: 'Tangerine', sans-serif;
+  font-size: 32px;
+  text-shadow: 4px 4px 4px #aaa;
+
+}
+
+aside .mensaje {
+  font-family: 'Tangerine', sans-serif;
+  font-size: 32px;
+  text-shadow: 4px 4px 4px #aaa;
+  background:none;
+  background-image: url("imagenes/muñeco.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 93%;
+  height: 90%;
+  min-height: 100px;
+  resize: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.contenedor aside {
+  background: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 370px;
+  grid-area: sidebar;
+  border-radius: 3px;
+}
+
+.widget-1 {
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: widget-1;
+}
+
+.widget-1 button {
+  background: #bec339;
+  color: rgb( 9, 83 , 148 );
+  font-family: 'Tangerine', sans-serif;
+  font-size: 32px;
+  text-shadow: 4px 4px 4px blanchedalmond;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  width: 30%;
+  margin: 0.3em 3em;
+  transition: 1s background;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: #8a8585 0px 1.5px 15px;
+}
+
+aside .btnCopiar {
+ background: #bec339;
+  color: rgb( 9, 83 , 148 );
+  font-family: 'Tangerine', sans-serif;
+  font-size: 32px;
+  text-shadow: 4px 4px 4px #aaa;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  width: 30%;
+  margin: 0.3em 3em;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: #8a8585 0px 1.5px 15px;
+}
+
+.widget-1 button:hover {
+  background: rgb(204, 255, 102);
+}
+
+aside p {
+  font-size: 12px;
+}
+
+aside .advertencia {
+  text-align: center;
+}
+
+textarea:focus {
+  outline:none;
+}
+
+@media screen and (max-width:768px) {
+  .contenedor {
+    grid-template-areas:  "encabezado encabezado encabezado"
+                          "contenido contenido contenido"
+                          "widget-1 widget-1 widget-1"
+                          "sidebar sidebar sidebar";
+  }
+
+  .widget-1 {
+    gap: 30px;
+  }
+
+  .widget-1 button {
+    margin: 0;
+  }
+
+  header .logoNombre {
+    padding: center;
+  }
+
+  header .logoNombre h2 {
+    display: none;
+  }
+
+}
