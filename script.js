@@ -5,8 +5,10 @@
  /* 1- que el input No permita ingresar Numeros, y caracteres especiales
     2- que No permita entradas de letras Mayusculas
     3- Posible solucion utilizar solamente abecedario letras minusculas,
-       crear un condicional dento de la funcion {o} bien encontrar la manera de reconocer 
-       la entrada en el input Texto */
+       crear un condicional dentro de la funcion {o} bien encontrar la manera de reconocer 
+       la entrada en el input Texto 
+    4- Otra solucion invetigar expresiones regulares*/
+
 
 
 const inputTexto = document.querySelector(".entradaTexto");
@@ -15,6 +17,12 @@ const adv = document.querySelector(".advertencia");
 const copiar = document.querySelector(".btnCopiar");
 
 copiar.style.display = "none"
+
+// function Texto entreda (desarrollar formula)
+
+     /*function solominusculas(mensaje)
+           if const entradaTexto = [A-Z] 
+           return  "Ingrese caracteres en minusculas"*/
 
 // Boton Encriptar mensaje
 
@@ -30,7 +38,7 @@ function btnCript() {
 
 function cript(stringEncriptada) {
   let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o","ober"], ["u","ufat"]];
-  stringEncriptada = stringEncriptada.toLowerCase(); // ESYA LINEA DE CODIGO CONVIERTE EL STRING EN MINUSCULAS
+  stringEncriptada = stringEncriptada.toLowerCase(); // ESTA LINEA DE CODIGO CONVIERTE EL STRING EN MINUSCULAS
 
   for(let i=0; i < matrizCodigo.length; i++) {
       if(stringEncriptada.includes(matrizCodigo[i][0])) {
@@ -52,7 +60,7 @@ function btnDscript() {
 
 function dsCript(stringDesencriptada) {
   let matrizCodigo = [ ["e", "enter"], ["i", "imes"], ["a", "ai"], ["o","ober"], ["u","ufat"]];
-  stringDesencriptada = stringDesencriptada.toLowerCase();// ESYA LINEA DE CODIGO CONVIERTE EL STRING EN MINUSCULAS
+  stringDesencriptada = stringDesencriptada.toLowerCase();// ESTA LINEA DE CODIGO CONVIERTE EL STRING EN MINUSCULAS
 
   for(let i=0; i < matrizCodigo.length; i++) {
       if(stringDesencriptada.includes(matrizCodigo[i][1])) {
